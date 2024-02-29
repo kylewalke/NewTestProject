@@ -24,7 +24,5 @@ jobs:
       - name: Check the outputs to determine whether to fail
         if: |
           steps.run-code-analyzer.outputs.exit-code > 0 ||
-          steps.run-code-analyzer.outputs.num-sev1-violations > 151 ||
-          steps.run-code-analyzer.outputs.num-violations > 208 ||
-          steps.run-code-analyzer.outputs.num-violations > 1000
+          steps.run-code-analyzer.outputs.num-violations > 4
         run: exit 1
